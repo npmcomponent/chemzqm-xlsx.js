@@ -3,7 +3,6 @@
   <head>
     <title>Example of xlsx.js</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="build/build.css">
     <script src="build/build.js"></script>
     <style>
       body {
@@ -14,9 +13,27 @@
   <body>
     <div class="col">
     </div>
+    <button id="save">save</button>
 
     <script>
-      var xlsx.js = require('xlsx.js');
+      var xlsx = require('xlsx.js');
+      var $ = require('jquery');
+      var data = [
+        ['Person', 'Dogs'],
+        ['a', 0],
+        ['b', 1],
+      ];
+      $('#save').on('click', function() {
+        var file = {
+          worksheets: [[]], // worksheets has one empty worksheet (array)
+          creator: 'John Smith', created: new Date('8/16/2012'),
+          lastModifiedBy: 'Larry Jones', modified: new Date(),
+          activeWorksheet: 0
+        }, w = file.worksheets[0]; // cache current worksheet
+        w.name = '测试';
+        w.data = data;
+        window.location = xlsx(file).href();
+      });
     </script>
   </body>
 </html>

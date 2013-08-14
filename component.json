@@ -4,8 +4,12 @@
   "description": "converting the data in base64 XLSX files into JavaScript objects - and back",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
-  "development": {},
+  "dependencies": {
+    "chemzqm/jszip": "*"
+  },
+  "development": {
+    "component/jquery": "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [
