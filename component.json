@@ -1,0 +1,14 @@
+{
+  "name": "xlsx.js",
+  "repo": "chemzqm/xlsx.js",
+  "description": "converting the data in base64 XLSX files into JavaScript objects - and back",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
