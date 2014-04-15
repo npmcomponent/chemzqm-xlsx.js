@@ -1,6 +1,6 @@
 var JSZip = null
 if (typeof require === 'function') {
-	JSZip = require('jszip');
+	JSZip = require('chemzqm-jszip');
 }
 
 //----------------------------------------------------------
